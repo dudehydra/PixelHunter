@@ -1,5 +1,6 @@
 const renderDOM = (element) => {
   const main = document.querySelector('main.central');
-  main.innerHTML = element.innerHTML;
+  main.innerHTML = '';
+  main.appendChild(element);
 };
 export default renderDOM;

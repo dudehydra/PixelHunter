@@ -1,4 +1,6 @@
 import getElementFromTemplate from '../newDOM';
+import greeting from './greeting';
+import renderDOM from '../renderDOM';
 
 const html = `<div id="intro" class="intro">
       <h1 class="intro__asterisk">*</h1>
@@ -6,4 +8,10 @@ const html = `<div id="intro" class="intro">
     </div>`;
 
 const element = getElementFromTemplate(html);
+document.addEventListener(`click`, function (evt) {
+  const star = document.querySelector(`.intro__asterisk`);
+  if (evt.target === star) {
+    renderDOM(greeting);
+  }
+});
 export default element;

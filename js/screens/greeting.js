@@ -1,4 +1,6 @@
 import getElementFromTemplate from '../newDOM';
+import renderDOM from '../renderDOM';
+import rules from './rules';
 
 const html = `<div class="greeting central--blur">
     <div class="greeting__logo"><img src="img/logo_big.png" width="201" height="89" alt="Pixel Hunter"></div>
@@ -15,5 +17,12 @@ const html = `<div class="greeting central--blur">
   </div>`;
 
 const element = getElementFromTemplate(html);
+console.log(element);
+const arrow = element.querySelector(`.greeting__continue img`);
+element.addEventListener(`click`, function (evt) {
+  if (evt.target === arrow) {
+    renderDOM(rules);
+  }
+});
 
 export default element;
