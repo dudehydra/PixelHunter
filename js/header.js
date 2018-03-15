@@ -1,4 +1,5 @@
 import getElementFromTemplate from './newDOM';
+import initialState from './data';
 
 const headerTemplate = `<header class="header">
   <div class="header__back">
@@ -9,9 +10,9 @@ const headerTemplate = `<header class="header">
   </div>
   <h1 class="game__timer">NN</h1>
   <div class="game__lives">
-  <img src="img/heart__empty.svg" class="game__heart" alt="Life" width="32" height="32">
-  <img src="img/heart__full.svg" class="game__heart" alt="Life" width="32" height="32">
-  <img src="img/heart__full.svg" class="game__heart" alt="Life" width="32" height="32">
+    ${new Array(3 - initialState.lives).fill(`<img src="img/heart__empty.svg" class="game__heart" alt="Life" width="32" height="32">`).join(` `)}
+    ${new Array(initialState.lives).fill(`<img src="img/heart__full.svg" class="game__heart" alt="Life" width="32" height="32">`).join(` `)}
+
   </div>
   </header>`;
 
