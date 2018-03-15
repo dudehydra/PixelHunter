@@ -1,6 +1,6 @@
 const getElementFromTemplate = (html) => {
-  return new DOMParser().parseFromString(html, `text/html`).querySelector(`div`);
+  const container = document.createElement(`template`);
+  container.innerHTML = html;
+  return container.content;
 };
-
 export default getElementFromTemplate;
-

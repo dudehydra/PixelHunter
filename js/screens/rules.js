@@ -2,7 +2,7 @@ import getElementFromTemplate from '../newDOM';
 import game1 from './game-1';
 import renderDOM from '../renderDOM';
 
-const html = `<div>
+const html = `
 <header class="header">
     <div class="header__back">
       <span class="back">
@@ -37,7 +37,6 @@ const html = `<div>
       <a href="https://vk.com/htmlacademy" class="social-link  social-link--vk">Вконтакте</a>
     </div>
   </footer>
-</div>
   `;
 const element = getElementFromTemplate(html);
 

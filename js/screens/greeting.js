@@ -19,8 +19,9 @@ const html = `<div class="greeting central--blur">
 const element = getElementFromTemplate(html);
 console.log(element);
 const arrow = element.querySelector(`.greeting__continue img`);
-element.addEventListener(`click`, function (evt) {
+document.addEventListener(`click`, function (evt) {
   if (evt.target === arrow) {
+    console.log('lel');
     renderDOM(rules);
   }
 });
